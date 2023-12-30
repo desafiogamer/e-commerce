@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-second-color: #2f0f30;
+}
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+}
+#menu{
+    background: #2f0f30;
+    border-right: 1px solid white;
+}
+
+.title{
+    padding: 0 30px;
+}
+#menu img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -20px;
+}
+.title p{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin: 0;
+}
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: white;
+}
+
+.menu-item a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 12px 0;
+    color: rgb(128, 129, 129);
+    font-weight: 300;
+    
+}
+.menu-item a:hover{
+    background: rgb(250, 212, 218);
+}
+#food-items{
+    background-color: var(--main-second-color);
+    overflow: auto;
+    height: 100vh;
+}
+
+#header{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: whitesmoke;
+    z-index: 1;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#header .address{
+    font-size: 20px;
+    
+}
+#map{
+    font-size: 25px;
+    color: red;
+}
+.your-address{
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.add-box i{
+    font-size: 20px;
+}
+
+#header select{
+    width: 150px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background: none;
+    color: rosybrown;
+    padding: 0 5px;
+}
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: block;
+}
+.util i,.user i{
+    font-size: 18px;
+    margin: 0 16px;
+    border: 1px solid white;
+    padding: 8px 16px;
+    color: greenyellow;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.util i:active{
+    color: white;
+    background: crimson;
+}
+#biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
+    margin-top: 40px;   
+}
+#paneer #item-card,#vegetable #item-card{
+    background: #fddde2;
+}
+#chinese #item-card,#south-indian #item-card{
+    background: #fddde2;
+}
+#category-name,.item-menu{
+    margin: 10px;
+    font-size: 35px;   
+    color: white;
+    font-family: 'Aclonica', sans-serif;
+}
+
+#Especial,
+.item-menu {
+    margin: 10px;
+    font-size: 35px;
+    color: white;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.montar,
+.item-menu {
+    margin: 10px;
+    font-size: 35px;
+    color: white;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.copoPronto,
+.item-menu {
+    margin: 10px;
+    font-size: 35px;
+    color: white;
+    font-family: 'Aclonica', sans-serif;
+}
+
+#item-card{
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    background: #fddde2;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    transition: 0.5s all step-end;
+}
+#item-card:hover img{
+    transform: scale(1.2);
+}
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#rating{
+    padding: 7px;
+    color: goldenrod;
+    background: black;
+    font-size: 14px;
+    border-radius: 15px;
+}
+.fa-heart-o{
+    padding: 6px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.toggle-heart{
+background: orangered;
+color: white; 
+}
+#item-card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: darkslategray;
+    font-size: 18px;
+}
+#item-price{
+    margin: 0;
+    color: rgb(2, 27, 27);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: var(--main-second-color);
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: white;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.cart-btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+    color: white;
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#cart-page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+#checkout{
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: var(--main-second-color);
+    padding: 10px 20px;
+}
+#checkout p{
+    margin: 15px 0;
+    float: left;
+}
+#total-price,#total-item{
+    font-size: 25px;
+    color: white;
+}
+#delievery{
+    font-size: 20px;
+    color: limegreen;
+}
+#cart{
+    background: var(--main-second-color);
+    padding-right: 30px;
+    overflow-y: scroll;
+    border-left: 1px solid white;
+    padding-left: 30px;
+}
+
+.item-menu{
+    margin: 0;
+    font-size: 30px;
+    margin-top: 40px;
+    color: white;
+    background: whitesmoke;
+    
+}
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(255, 216, 222);
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.678);
+}
+.taste-header{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: var(--main-second-color);
+}
+#mobile-view{
+    display: none;
+}
+
+#biryani,
+#chicken,
+#paneer,
+#Frutas,
+#Chocolate,
+#Adicionais{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+    
+}
+
+#m-total-amount{
+    display: none;
+}
+
+#btnProxi{
+    display: none;
+}
+
+@media(max-width: 1200px) {
+    #biryani,
+    #chicken,
+    #paneer,
+    #Frutas,
+    #Chocolate,
+    #Adicionais{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
+        
+    }
+}
+
+@media(max-width: 1000px) {
+
+    #biryani,
+    #chicken,
+    #paneer,
+    #Frutas,
+    #Chocolate,
+    #Adicionais {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 60px;
+
+    }
+}
+
+@media(max-width: 801px) {
+
+    #biryani,
+    #chicken,
+    #paneer,
+    #Frutas,
+    #Chocolate,
+    #Adicionais {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 60px;
+
+    }
+
+    #btnProxi{
+        display: block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        outline: none;
+        border: none;
+        background: crimson;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 612px) {
+
+    #biryani,
+    #chicken,
+    #paneer,
+    #Frutas,
+    #Chocolate,
+    #Adicionais {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 60px;
+
+    }
+}
+
+@media screen and (max-width : 800px) and (-webkit-min-device-pixel-ratio: 2){
+    .container{
+        display: none;
+    }
+    #mobile-view{
+        display: grid;
+        height: 100%;
+        overflow: hidden;
+        width: 100vw;
+    }
+    .mobile-top{
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        background: #5e0061;
+        z-index: 1;
+    }
+    .item-container{
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        overflow-y: scroll;
+        background: var(--main-second-color);
+        min-height: 100vh;
+    }
+
+    .valores{
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        margin-top: -10px;
+        left: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        z-index: 999;
+        background: rgb(138, 0, 143);
+    }
+
+    #btnProx{
+        position: fixed;
+        bottom: 0px;
+        right: 10px;
+    }
+
+    .logo-box,.top-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #logo{
+        width: 90px;
+        height: 70px;
+    }
+    .logo-box .your-address{
+        font-size: 18px;
+        width: 150px;
+        color: crimson;
+        text-transform: capitalize;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .top-menu{
+
+        color: white;
+    }
+    .top-menu i{
+        font-size: 20px;
+        cursor: pointer;
+        padding: 12px 5px ;
+        border-radius: 50%;
+    }
+    
+    .m-cart-toggle{
+        color: white;
+        background: white;
+    }
+    .category-header{
+        display: flex;
+        width: 100vw;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background:#72008f;
+        padding-top: 10px;
+        z-index: 1;
+        margin: 0;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    .toggle-category{
+        display: none;
+        position: relative;
+    }
+    .list-card{
+        margin: 0 10px;
+        text-align: center;
+    }
+    .list-card img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .list-card:hover{
+        background: none;
+    }
+    .list-card:hover img{
+        transform: none;
+        transition: none;
+    }
+    .list-name{
+        margin: 5px 0;
+        color: white;
+        width: max-content;
+        font-size: 16px;
+    }
+    #food-items{        
+        padding: 5px 10px;
+    }
+    #category-name{
+        font-size: 25px;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #item-card{
+        width: 150px;
+        height: auto;
+    }
+    #item-card img{
+        width: 100px;
+        height: 100px;
+    }
+    #item-name,#item-price{
+        font-size: 16px;
+    }
+    .list-card{
+        flex-direction: column;
+    }
+    #cart-page{
+        margin: 0;
+        padding: 10px 5px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+    #cart-page table thead td{
+        font-size: 20px;
+    }
+    #cart-page table tbody td{
+        font-size: 18px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 25px;
+        display: inline-block;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #m-total-amount{
+        display: inline-block;
+        color: white;
+        padding: 5px 10px;
+        margin: 0;
+        border:  1px solid white;
+        float: right;
+    }
+    .cart-btn{
+        font-size: 14px;
+        background: white;
+        padding: 8px 15px;
+        margin: auto;
+    }
+    .btn-box{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
+    #mobile-view{
+        min-height: -webkit-fill-available;
+    }
+    #item-card{
+        height: auto;
+        width: 140px;
+    }
+    #food-items{
+        padding: 0;
+    }
+}
+
+.carrinho-mobi{
+    background: red;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+
+.add-to-cart{
+    background: rgba(172, 255, 47, 0.288);
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    padding: 5px;
+    color: black;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.add-to-cart:hover {
+    background: #acff2fef;
+}
+
+.btn-prox{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.endereco {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 90%;
+    width: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(76, 0, 95);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 999;
+    padding-bottom: 50px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.endereco .voltar {
+    width: 38px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 330px;
+}
+
+.endereco input {
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.endereco button {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid black;
+    outline: none;
+    color: black;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.endereco.ativo {
+    opacity: 1;
+    width: 400px;
+}
+
+#item-Descricao{
+    background: #f5f5f5;
+    box-shadow: 0 5px 10px black;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+.item-menu{
+    background: var(--main-second-color);
+}
+
+#food-container{
+    background: var(--main-second-color);
+}
+
+@media(max-width: 484px) {
+    .endereco{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .endereco .voltar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 280px;
+    }
+
+    .endereco.ativo {
+        width: 96%; 
+    }
+}

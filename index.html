@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <img src="./images/acai.png" alt="">
+            </div>
+            <div class="menu-item">
+                <a href="#">Contato</a>
+                <a href="#">Localização</a>
+            </div>
+        </div>
+
+        <div id="food-container">
+            <div id="header">
+            </div>
+            <div id="food-items" class="d-food-items">
+                <p id="Copo Pronto" class="copoPronto">Copos Prontos</p>
+                <div id="biryani" class="d-biryani">
+                    
+                </div>
+
+                <p id="Especial">Especiais</p>
+                <div id="chicken" class="d-chicken">
+                    
+                </div>
+
+                <p id="Montar Copo" class="montar">Monte seu Copo</p>
+                <div id="paneer" class="d-paneer">
+                </div>
+
+                <p id="category-name">Frutas</p>
+                <div id="Frutas" class="d-Frutas">    
+                </div>
+
+                <p id="category-name">Chocolate</p>
+                <div id="Chocolate" class="d-Chocolate"> 
+                </div>
+
+                <p id="category-name">Adicionais</p>
+                <div id="Adicionais" class="d-Chocolate">
+                </div>
+            </div>
+
+            <div id="cart-page" class="cart-toggle">
+                <div class="valores">
+                    <p id="cart-title">Seus itens</p>
+                    <p id="m-total-amount">Preço total : 100</p>
+                </div>
+                <table>
+                    <thead>
+                        <td>Produto</td>
+                        <td>Nome</td>
+                        <td>Quantidade</td>
+                        <td>Preço</td>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+                <button class="btn-proxi" id="btnProxi" onclick="Finalizar()">Proximo</button>
+            </div>  
+        </div>
+
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+                    <i class="bi bi-basket" id="cart-plus">0 Items</i>
+                </div>
+            </div>
+            <div id="category-list">
+                <p class="item-menu">Opções</p>
+                <div class="border"></div>
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Item : 5</p>
+                <p id="total-price"></p>
+                <p id="delievery">Frete delivery R$ 3,00</p>
+                <button class="btn-prox" id="btnProx">Proximo</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-view" class="mobile-view">
+        <div class="mobile-top">
+            <div class="logo-box">
+                <img src="./images/acai.png" alt="" id="logo">
+                <i class="fa fa-cart-plus carrinho-mobi" id="m-cart-plus"> 0</i>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div class="category-header" id="category-header"></div>
+        </div>
+    </div>
+    <div class="endereco" id="endereco"></div>
+
+    <script src="index.js" type="module"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
